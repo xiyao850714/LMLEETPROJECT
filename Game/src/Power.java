@@ -1,15 +1,13 @@
-package offer;
 
 public class Power {
 	public static double myPower(double base, int e){
-		double result = 0.0;
-		double tmp = 0.0;
-		if(e == 0) return 1.0;
-		if(e == 1) return base;
-		if(e >1)
-			tmp = myPower(base, e >> 1);
-		    result = tmp*tmp;
-		if(e%2 == 1) result *= base;
+		double result = 0.0d;
+		if(e == 0.0d) return 1.0d;
+		if(e == 1.0d) return base;
+		if(e >1.0d)
+			result = myPower(base, e >> 1);
+		    result *= result;
+		if(e%2 == 1.0d) result *= base;
 		if( e > -0.000001 && e < 0.000001 )
 			result = 1.0/result;
 		return result;

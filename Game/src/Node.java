@@ -1,4 +1,4 @@
-package offer;
+
 
 class Node<E> {
     E data;
